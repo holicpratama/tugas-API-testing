@@ -1,0 +1,16 @@
+{
+  "name": "tugasapimasdhony",
+  "version": "1.0.0",
+  "description": "Tugas Mas Dhony",
+  "main": "index.js",
+  "scripts": {
+    "tugas": "npx mocha tests/**/*.js"
+  },
+  "author": "Nur Khalik",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
