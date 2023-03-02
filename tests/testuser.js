@@ -4,6 +4,10 @@ const { it } = require("mocha");
 const api = require("../api_kuncie/api.js");
 
 describe("USER TESTS", async () => {
+  // New User Disimpan Didalam Hooks
+  // New User Akan Digunakan Diget User dan Delete User
+  // Sehingga User Yang Ditest Akan Didelete
+  // Agar Tidak Membuat User Berulang Ketika Menjalankan Test
   before(async () => {
     const createUser = await api.createUser(
       "Nur Kholik",
@@ -14,6 +18,7 @@ describe("USER TESTS", async () => {
     newUser = createUser.body;
   });
 
+  // TUGAS 1  
   describe("API GET USERS LIST", async () => {
     it("test apakah fungsi API list user berjalan dengan benar dengan data user Nur Khalik muncul", async () => {
       getUsers = await api.getUserList();
@@ -47,6 +52,7 @@ describe("USER TESTS", async () => {
     });
   });
 
+  // TUGAS 2 
   describe("API DELETE USERS LIST", async () => {
     before(async () => {
       deleteUser = await api.deleteUser(newUser.id);
